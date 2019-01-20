@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * Created by sukenda on 29/07/18.
+ * Edited by afzalmardiyansyah on 20/01/19.
  * Project belajar-spring
  */
 public interface BaseService<T> {

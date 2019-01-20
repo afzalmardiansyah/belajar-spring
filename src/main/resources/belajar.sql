@@ -18,10 +18,10 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for table_students
+-- Table structure for table_peserta
 -- ----------------------------
-DROP TABLE IF EXISTS `students`;
-CREATE TABLE `students` (
+DROP TABLE IF EXISTS `peserta`;
+CREATE TABLE `peserta` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) DEFAULT NULL,
   `address` varchar(200) DEFAULT NULL,
@@ -29,9 +29,9 @@ CREATE TABLE `students` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of table_students
+-- Records of table_peserta
 -- ----------------------------
 BEGIN;
-INSERT INTO `students` VALUES (1, 'Student 1', 'Yogyakarta');
-INSERT INTO `students` VALUES (2, 'Student 2', 'Bantul');
+INSERT INTO peserta VALUES (1, 'Peserta 1', 'Yogyakarta');
+INSERT INTO peserta VALUES (2, 'Peserta 2', 'Bantul');
 COMMIT;

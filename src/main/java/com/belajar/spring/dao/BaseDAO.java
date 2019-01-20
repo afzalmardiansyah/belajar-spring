@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * Created by sukenda on 29/07/18.
+ * Edited by afzalmardiansyah 0n 20/01/19.
  * Project belajar-spring
  */
 public interface BaseDAO<T> {

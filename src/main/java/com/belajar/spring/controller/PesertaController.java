@@ -1,7 +1,7 @@
 package com.belajar.spring.controller;
 
-import com.belajar.spring.entity.Student;
-import com.belajar.spring.service.StudentService;
+import com.belajar.spring.entity.Peserta;
+import com.belajar.spring.service.PesertaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,28 +9,29 @@ import java.util.List;
 
 /**
  * Created by sukenda on 29/07/18.
+ * Edited by afzalmardiansyah 0n 20/01/19.
  * Project belajar-spring
  */
 
 @RestController
-public class StudentController {
+public class PesertaController {
 
     @Autowired
-    private StudentService service;
+    private PesertaService service;
 
-    @GetMapping(value = "/students")
-    public List<Student> students() {
+    @GetMapping(value = "/peserta")
+    public List<Peserta> peserta() {
         return service.find();
     }
 
-    @GetMapping(value = "/students/{id}")
-    public Student findById(@PathVariable("id") Integer id) {
+    @GetMapping(value = "/peserta/{id}")
+    public Peserta findById(@PathVariable("id") Integer id) {
         return service.findById(id);
     }
 
-    @PostMapping(value = "/students")
-    public String save(@RequestBody Student student) {
-        Student data = service.save(student);
+    @PostMapping(value = "/peserta")
+    public String save(@RequestBody Peserta peserta) {
+        Peserta data = service.save(peserta);
         if (data.getId() == 0) {
             return "Gagal insert data";
         } else {
@@ -38,9 +39,9 @@ public class StudentController {
         }
     }
 
-    @PutMapping(value = "/students")
-    public String update(@RequestBody Student student) {
-        Student data = service.update(student);
+    @PutMapping(value = "/peserta")
+    public String update(@RequestBody Peserta peserta) {
+        Peserta data = service.update(peserta);
         if (data.getId() == 0) {
             return "Gagal update data";
         } else {
@@ -48,9 +49,9 @@ public class StudentController {
         }
     }
 
-    @DeleteMapping(value = "/students/{id}")
+    @DeleteMapping(value = "/peserta/{id}")
     public String delete(@PathVariable("id") Integer id) {
-        int data = service.delete(new Student(id));
+        int data = service.delete(new Peserta(id));
         if (data == 0) {
             return "Gagal delete data";
         } else {
