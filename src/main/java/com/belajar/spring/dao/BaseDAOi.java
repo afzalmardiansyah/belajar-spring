@@ -3,6 +3,7 @@ import java.util.List;
 
 /**
  * Created by afzalmardiansyah on 20/01/19
+ *
  * @param <U>
  */
 public interface BaseDAOi<U> {
